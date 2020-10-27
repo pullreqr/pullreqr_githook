@@ -1,0 +1,13 @@
+[package]
+name = "pull_req"
+version = "0.1.0"
+authors = ["matt rice <ratmice@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+hex = "0.4.2"
+bstr = "0.2.14"
+fs3 = "0.5.0"
+quick-error = "2.0.0"
