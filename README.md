@@ -12,3 +12,5 @@ you'll need a executable `ssh-info` in the `PATH` environment variable, somethin
 #!/bin/sh
 echo "{\"user\": \"${USER}\", \"host\": \"localhost\", \"port\": 2222, \"type\": \"agit\", \"version\": 1, \"expire\": 0}"
 ```
+
+Here are some hideous scripts to set the whole thing up [pull_req_container](https://github.com/ratmice/pull_req_container)
