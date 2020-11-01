@@ -253,7 +253,9 @@ fn update_refs(
     commands: &Vec<(String, String, String)>,
     log: &mut dyn io::Write,
 ) -> Result<(), Error> {
-    let new_ref = format!("refs/heads/for/master/pr{}", incr_pull_id(log)?);
+    // FIXME we actually need to put something else besides master here.
+    // I.e. the actual branch
+    let new_ref = format!("refs/heads/for/{branch}/pr{pull_id}", branch="master", pull_id=incr_pull_id(log)?);
     let mut args = ["update-ref", &new_ref, "0"];
     for (_old_oid, _new_oid, _s_ref) in commands.iter() {
         args[2] = _new_oid;
