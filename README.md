@@ -1,4 +1,4 @@
-See the [documentation](https://pullreqer.github.io)
+See the [documentation](https://pullreqr.github.io)
 
 ### Status
 Testing, this is an initial prototype for investigating alibaba's [AGitFlow](https://git-repo.info) protocol,

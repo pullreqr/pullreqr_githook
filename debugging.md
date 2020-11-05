@@ -9,7 +9,7 @@ install http://git-repo.info
 ```
 cat <<EOF >foo.git/proc-receive
 #!/bin/sh
-tee ~/logs/input.log | pull_req | tee out.put.log
+tee ~/logs/input.log | pullreq | tee out.put.log
 EOF
 
 chmod +x proc-receive

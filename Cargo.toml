@@ -1,5 +1,5 @@
 [package]
-name = "pull_req"
+name = "pullreqr"
 version = "0.1.0"
 authors = ["matt rice <ratmice@gmail.com>"]
 edition = "2018"
