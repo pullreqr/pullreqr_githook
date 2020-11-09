@@ -61,6 +61,11 @@ fn incr_pull_id(log: &mut dyn io::Write) -> Result<u64, Error> {
         .open("info/pull_id.count")?;
     let () = f.lock_exclusive()?;
 
+
+    // FIXME read_exact calls probably needs a timeout associated with it
+    // for correctness to avoid a DOS. That may be covered by receive-pack
+    // haven't checked, but at least while debugging it would be helpful.
+
     // If this fails, we likely just created the empty file and failed to read,
     // so contents is still [0; 8], and we write that to the file next.
     if let Ok(()) = f.read_exact(&mut contents) {
